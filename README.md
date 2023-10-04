@@ -1,27 +1,21 @@
-# React + TypeScript + Vite
+# GIF Searcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is about searching and displaying GIF comes from GIPHY API.
 
-Currently, two official plugins are available:
+## How to run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`npm install` - install all dependencies  
+`npm run dev` - run dev mode on port 5173
 
-## Expanding the ESLint configuration
+## Functionalities
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tools
 
-- Configure the top-level `parserOptions` property like this:
+**The following tools were used in project:**
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- **[React](https://github.com/facebook/react)** - Main technology
+- **[Vite](https://vitejs.dev/)** - Next Generation Frontend Tooling
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Live
+
+qif-searcherr.netlify.app/
