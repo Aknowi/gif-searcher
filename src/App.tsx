@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { debounce } from "throttle-debounce";
 import "./App.css";
 
 // wyciągnąć tytul do img alt
-
+// dodać debounce do wpisywania w inpucie (zainstalowanie typu dla typescript)
+//
 const SEARCH_URL = `https://api.giphy.com/v1/gifs/search?type=gifs&limit=10&api_key=Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g&q=`;
 
 function App() {
@@ -39,11 +41,25 @@ function App() {
     }
   };
 
+  function handleQueryChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const searchQuery = e.target.value;
+
+    fetchResponse(searchQuery);
+  }
+
+  const debounceHandleQueryChange = debounce(1000, handleQueryChange);
+
   return (
     <>
       <h1></h1>
       <form onSubmit={handleSubmit}>
-        <input type="search" name="gif" id="gif"></input>
+        <input
+          onChange={debounceHandleQueryChange}
+          type="search"
+          name="gif"
+          id="gif"
+          placeholder="Search the GIF..."
+        ></input>
         <button type="reset">Clear</button>
       </form>
       {gif && <img src={gif} alt="" />}

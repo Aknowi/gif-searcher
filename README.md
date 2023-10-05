@@ -9,6 +9,9 @@ This project is about searching and displaying GIF comes from GIPHY API.
 
 ## Functionalities
 
+- Debounce search
+- Search onEnter
+
 ## Tools
 
 **The following tools were used in project:**
@@ -18,4 +21,4 @@ This project is about searching and displaying GIF comes from GIPHY API.
 
 ## Live
 
-qif-searcherr.netlify.app/
+**(qif-searcherr.netlify.app/)**
