@@ -3,13 +3,14 @@ import { debounce } from "throttle-debounce";
 import "./App.css";
 
 // wyciągnąć tytul do img alt
-// dodać debounce do wpisywania w inpucie (zainstalowanie typu dla typescript)
-//
+
 const SEARCH_URL = `https://api.giphy.com/v1/gifs/search?type=gifs&limit=10&api_key=Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g&q=`;
 
 function App() {
   const [gif, setGif] = useState(null);
+  const [imageTitle, setImageTitle] = useState("");
 
+  imageTitle;
   async function fetchResponse(searchQuery: string) {
     try {
       const response = await fetch(`${SEARCH_URL}${searchQuery}`);
@@ -21,9 +22,12 @@ function App() {
         const gifUrl =
           responseData.data[randomDataIndex].images.downsized_large.url;
 
+        const altTitle = responseData.data[randomDataIndex].alt_text;
+
         if (gif === gifUrl) return fetchResponse(searchQuery);
 
         setGif(gifUrl);
+        setImageTitle(altTitle);
       }
     } catch (error) {
       console.log(error);
@@ -62,7 +66,7 @@ function App() {
         ></input>
         <button type="reset">Clear</button>
       </form>
-      {gif && <img src={gif} alt="" />}
+      {gif && <img src={gif} alt={imageTitle} />}
     </>
   );
 }

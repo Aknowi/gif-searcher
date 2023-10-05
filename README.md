@@ -21,4 +21,4 @@ This project is about searching and displaying GIF comes from GIPHY API.
 
 ## Live
 
-**(qif-searcherr.netlify.app/)**
+https://gif-searcher-aknowi.netlify.app/
