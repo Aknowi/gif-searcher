@@ -55,16 +55,18 @@ function App() {
 
   return (
     <>
-      <h1></h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="title">gif searcher</h1>
+      <form onSubmit={handleSubmit} className="gif-form">
         <input
+          className="gif-input"
           onChange={debounceHandleQueryChange}
           type="search"
           name="gif"
           id="gif"
-          placeholder="Search the GIF..."
+          placeholder="Search a GIF..."
         ></input>
-        <button type="reset">Clear</button>
+
+        <button type="reset" className="gif-button"></button>
       </form>
       {gif && <img src={gif} alt={imageTitle} />}
     </>

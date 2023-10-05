@@ -4,3 +4,93 @@
   padding: 2rem;
   text-align: center;
 }
+
+.title {
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-bottom: 30px;
+  margin-top: 0;
+  background-image: url(./Images/roses.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gif-form {
+  display: flex;
+  margin: 2rem auto;
+  padding: 1rem;
+  position: relative;
+  width: 300px;
+  background: #242424;
+  border-radius: 50px;
+}
+
+.gif-input {
+  width: 250px;
+  text-align: center;
+  background-color: #242424;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.gif-input:focus {
+  outline: none;
+}
+
+.gif-form:before,
+.gif-form:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 50px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: rainbow 20s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.gif-form:after {
+  filter: blur(15px);
+}
+
+.gif-button {
+  border: none;
+  background: none;
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  cursor: pointer;
+  background-image: url(./Images/eraser.svg);
+  /* https://iconduck.com/icons/100062/eraser */
+}
