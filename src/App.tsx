@@ -4,7 +4,7 @@ import "./App.css";
 
 // wyciągnąć tytul do img alt
 
-const SEARCH_URL = `https://api.giphy.com/v1/gifs/search?type=gifs&limit=10&api_key=Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g&q=`;
+const SEARCH_URL = `https://api.giphy.com/v1/gifs/search?type=gifs&limit=10&api_key=HvEh3K4rRpTV7JLMXY9Sbl7KAjTfDIGf&q=`;
 
 function App() {
   const [gif, setGif] = useState(null);
