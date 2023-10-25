@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { debounce } from "throttle-debounce";
 import "./App.css";
 
-// wyciągnąć tytul do img alt
-
 const SEARCH_URL = `https://api.giphy.com/v1/gifs/search?type=gifs&limit=10&api_key=HvEh3K4rRpTV7JLMXY9Sbl7KAjTfDIGf&q=`;
 
 function App() {
@@ -68,7 +66,7 @@ function App() {
 
         <button type="reset" className="gif-button"></button>
       </form>
-      {gif && <img src={gif} alt={imageTitle} />}
+      {gif && <img src={gif} alt={imageTitle} className="gif-img" />}
     </>
   );
 }
