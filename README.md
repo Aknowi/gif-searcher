@@ -11,6 +11,7 @@ This project is about searching and displaying GIF comes from GIPHY API.
 
 - Debounce search
 - Search onEnter
+- RWD
 
 ## Tools
 
