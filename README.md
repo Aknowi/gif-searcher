@@ -1,6 +1,6 @@
 # GIF Searcher
 
-This project is about searching and displaying GIF comes from GIPHY API.
+This project allows users to search for GIF and is backed by GIPHY API.
 
 ## How to run locally
 
